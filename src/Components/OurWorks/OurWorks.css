@@ -1,0 +1,26 @@
+.carousel-dgn {
+  background-color: #111430;
+  height: 700px;
+}
+.carousel-size {
+  height: 400px;
+  margin-top: 50px;
+  width: 500px;
+}
+.carousel-title {
+  text-align: center;
+  color: white;
+}
+.carouselStyle {
+  height: 400px;
+}
+
+.carousel-indicators li {
+  background-color: #242a65;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.carousel-indicators {
+  margin-bottom: -80px;
+}

@@ -1,0 +1,24 @@
+.google-form {
+  border: 1px solid lightgray;
+  height: 400px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 1px 3px 20px;
+  border-radius: 20px;
+}
+.google-image {
+  height: 35px;
+  border: 1px solid lightgray;
+  border-radius: 999px;
+  margin: 0px 20px;
+}
+.google-image > img {
+  height: 33px;
+}
+.login-logo {
+  height: 50px;
+  margin-top: 10px;
+}
