@@ -28,7 +28,7 @@ const App = () => {
             <Route exact path="/">
               <Home />
             </Route>
-            <PrivateRoute path="/ordersubmitform/:orderid">
+            <PrivateRoute path="/ordersubmitform">
               <OrderSubmitForm />
             </PrivateRoute>
             <PrivateRoute path="/adminserviceslists">
