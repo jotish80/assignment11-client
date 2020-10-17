@@ -13,7 +13,10 @@ const Sidebar = () => {
   const [isAdmin, setIsAdmin] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/isAdminExist/" + loggedUser.email)
+    fetch(
+      "https://thawing-tundra-59535.herokuapp.com/isAdminExist/" +
+        loggedUser.email
+    )
       .then((res) => res.json())
       .then((data) => {
         setIsAdmin(data);

@@ -14,7 +14,7 @@ const AdminServicesLists = () => {
   // ---------fetching all services collection------------//
 
   useEffect(() => {
-    fetch("http://localhost:5000/getServices")
+    fetch("https://thawing-tundra-59535.herokuapp.com/getServices")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -36,7 +36,7 @@ const AdminServicesLists = () => {
     console.log(data);
 
     if (changeStatus.status) {
-      fetch(`http://localhost:5000/updateStatus`, {
+      fetch(`https://thawing-tundra-59535.herokuapp.com/updateStatus`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),

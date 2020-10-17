@@ -11,7 +11,7 @@ const OrderServicesList = () => {
   //.........Fetch for get orders.................//
 
   useEffect(() => {
-    fetch("http://localhost:5000/getOrders")
+    fetch("https://thawing-tundra-59535.herokuapp.com/getOrders")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

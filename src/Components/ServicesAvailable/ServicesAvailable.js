@@ -41,7 +41,7 @@ const ServicesAvailable = ({ services }) => {
               alt=""
             />
           </Link>
-          <h4 className="mt-3 mb-3">{services.service}</h4>
+          <h4 className="mt-3 mb-3">{services.title}</h4>
           <p>{services.description}</p>
         </div>
       </animated.div>

@@ -7,7 +7,7 @@ const ClientFeedbackDetails = ({ feedback }) => {
   //.......Fetch for get reviews...........//
 
   useEffect(() => {
-    fetch("http://localhost:5000/getReviews")
+    fetch("https://thawing-tundra-59535.herokuapp.com/getReviews")
       .then((res) => res.json())
       .then((data) => {
         setReviewList(data);

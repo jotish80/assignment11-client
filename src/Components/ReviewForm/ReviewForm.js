@@ -23,7 +23,7 @@ const ReviewForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:5000/addReviews", {
+    fetch("https://thawing-tundra-59535.herokuapp.com/addReviews", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(review),

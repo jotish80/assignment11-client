@@ -8,7 +8,7 @@ const ProvideServices = () => {
   //..........Fetch for get all services...........//
 
   useEffect(() => {
-    fetch("http://localhost:5000/getAllService")
+    fetch("https://thawing-tundra-59535.herokuapp.com/getAllService")
       .then((res) => res.json())
       .then((data) => {
         setNewService(data);

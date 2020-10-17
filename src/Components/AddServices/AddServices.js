@@ -16,7 +16,7 @@ const AddServices = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(admins);
-    fetch("http://localhost:5000/addAdmins", {
+    fetch("https://thawing-tundra-59535.herokuapp.com/addAdmins", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(admins),

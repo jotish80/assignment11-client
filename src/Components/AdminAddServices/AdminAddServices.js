@@ -31,7 +31,7 @@ const AdminAddServices = () => {
     formData.append("service", newService.service);
     formData.append("description", newService.description);
 
-    fetch("http://localhost:5000/addNewService", {
+    fetch("https://thawing-tundra-59535.herokuapp.com/addNewService", {
       method: "POST",
       body: formData,
     })
