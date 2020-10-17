@@ -4,58 +4,57 @@ import project2 from "../../images/project2.png";
 import project3 from "../../images/project3.png";
 import project4 from "../../images/project4.png";
 import project5 from "../../images/project5.png";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import "./OurWorks.css";
+
 const OurWorks = () => {
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+
   return (
-    <main className="carousel-dgn d-flex justify-content-center mb-5 mt-5 ">
-      <container className="carousel-size">
-        <h3 className="carousel-title">
-          Here are some of <span style={{ color: "#7AB259" }}>our works</span>
-        </h3>
-        <div
-          id="carouselExampleIndicators"
-          class="carousel slide mt-5"
-          data-ride="carousel"
-        >
-          <ol class="carousel-indicators">
-            <li
-              data-target="#carouselExampleIndicators"
-              data-slide-to="0"
-              class="active"
-            ></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="text-center carouselStyle">
-                <img src={project1} alt="" />
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="text-center carouselStyle">
-                <img src={project2} alt="" />
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="text-center carouselStyle">
-                <img src={project3} alt="" />
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="text-center carouselStyle">
-                <img src={project4} alt="" />
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="text-center carouselStyle">
-                <img src={project4} alt="" />
-              </div>
-            </div>
+    <section className="mt-5 carousel">
+      <h3 className="text-center text-white mb-4">
+        Here are some of <span style={{ color: "#7AB259" }}> our works</span>
+      </h3>
+      <div className="container">
+        <Carousel responsive={responsive}>
+          <div className="slide">
+            <img className="slide__img" src={project1} alt="" />
           </div>
-        </div>
-      </container>
-    </main>
+          <div className="slide">
+            <img className="slide__img" src={project2} alt="" />
+          </div>
+          <div className="slide">
+            <img className="slide__img" src={project3} alt="" />
+          </div>
+          <div className="slide">
+            <img className="slide__img" src={project4} alt="" />
+          </div>
+          <div className="slide">
+            <img className="slide__img" src={project5} alt="" />
+          </div>
+        </Carousel>
+        ;
+      </div>
+    </section>
   );
 };
 

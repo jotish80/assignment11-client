@@ -1,0 +1,13 @@
+.review-box {
+  border: 1px solid lightgray;
+  padding: 15px;
+  box-shadow: 1px 1px 1px 1px lightgray;
+  width: 300px;
+}
+
+.image-size {
+  float: left;
+  height: 60px !important;
+  width: 60px !important;
+  margin-right: 5px !important;
+}

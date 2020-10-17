@@ -1,18 +1,30 @@
-import { Avatar } from "@material-ui/core";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import ReviewDataShow from "../ReviewDataShow/ReviewDataShow";
 
 const ClientFeedbackDetails = ({ feedback }) => {
+  const [reviewList, setReviewList] = useState([]);
+
+  //.......Fetch for get reviews...........//
+
+  useEffect(() => {
+    fetch("http://localhost:5000/getReviews")
+      .then((res) => res.json())
+      .then((data) => {
+        setReviewList(data);
+      });
+  }, []);
+
   return (
-    <div style={{ border: "1px solid gray" }} className="col-md-4">
-      <div style={{ padding: "0px 5px", height: "100px" }} className="d-flex">
-        <Avatar style={{ height: "60px", width: "60px" }} src={feedback.img} />
-        <div>
-          <h4>{feedback.name}</h4>
-          <h5>{feedback.title}</h5>
-        </div>
-      </div>
-      <div>
-        <p>{feedback.description}</p>
+    <div className="container">
+      <h3 className="text-center mb-4 mt-5">
+        Customer <span style={{ color: "#7AB259" }}> Feedback</span>
+      </h3>
+      <div className="d-flex p-5">
+        {reviewList.map((review) => (
+          <div className="col-md-4">
+            <ReviewDataShow review={review} />
+          </div>
+        ))}
       </div>
     </div>
   );

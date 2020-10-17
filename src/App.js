@@ -11,12 +11,17 @@ import OrderServicesList from "./Components/OrderedServicesList/OrderedServicesL
 import OrderSubmitForm from "./Components/OrderSubmitForm/OrderSubmitForm";
 import ReviewForm from "./Components/ReviewForm/ReviewForm";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
-
 export const UserContext = createContext();
 export const TitleContext = createContext();
+
 const App = () => {
-  const [loggedUser, setLoggedUser] = useState({});
+  const [loggedUser, setLoggedUser] = useState({
+    email: "",
+    name: "",
+  });
+
   const [title, setTitle] = useState({});
+
   return (
     <UserContext.Provider value={[loggedUser, setLoggedUser]}>
       <TitleContext.Provider value={[title, setTitle]}>
@@ -46,7 +51,6 @@ const App = () => {
             <Route path="/reviewform">
               <ReviewForm />
             </Route>
-
             <Route path="*">
               <NotFound />
             </Route>

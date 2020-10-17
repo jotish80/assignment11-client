@@ -1,6 +1,36 @@
 .App {
   text-align: center;
 }
+.btn-done {
+  width: 90px;
+  background: #d2f5e3;
+  border: none;
+  height: 35px;
+  border-radius: 4px;
+  color: #009444;
+  font-size: 15px;
+  cursor: pointer;
+}
+.btn-ongoing {
+  width: 90px;
+  background: #ff98000d;
+  border: none;
+  height: 35px;
+  border-radius: 4px;
+  color: #ffc800;
+  font-size: 15px;
+  cursor: pointer;
+}
+.btn-pending {
+  width: 90px;
+  background: #ffe3e3;
+  border: none;
+  height: 35px;
+  border-radius: 4px;
+  color: #ff4545;
+  font-size: 15px;
+  cursor: pointer;
+}
 
 .App-logo {
   height: 40vmin;

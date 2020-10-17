@@ -39,19 +39,6 @@ const Navbar = () => {
                 <b style={{ color: "white" }}>Login</b>{" "}
               </Link>
             </button>
-            &nbsp;&nbsp;
-            <Link to="/adminserviceslists">
-              <button
-                style={{
-                  width: "134px",
-                  height: "45px",
-                }}
-                type="button"
-                class="btn btn-dark"
-              >
-                <b>Admin</b>
-              </button>
-            </Link>
           </ul>
         </div>
       </nav>

@@ -1,21 +1,15 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
-
+import React from "react";
 import peoples from "../../images/logos/peoples.png";
-
 import Navbar from "../Navbar/Navbar";
 import "./HeaderMain.css";
+
 const HeaderMain = () => {
-  // const [loggedUser, setLoggedUser] = useContext(UserContext);
   return (
     <div className=" header-main">
       <div className=" container header-main-container">
         <Navbar />
 
-        <main
-          // style={{ backgroundColor: "FBD062", height: "600px" }}
-          className="row d-flex align-items-center"
-        >
+        <main className="row d-flex align-items-center">
           <div className="col-md-4 offset-md-1">
             <h1>
               Let's Grow Your <br /> Brand To The <br />
@@ -23,8 +17,8 @@ const HeaderMain = () => {
             </h1>
 
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae,
-              repellendus!
+              We can help you to reach your goal. The services we provide most
+              important for any of your clients!
             </p>
 
             <button

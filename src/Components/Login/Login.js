@@ -3,7 +3,6 @@ import * as firebase from "firebase/app";
 import "firebase/auth";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import firebaseConfig from "./firebaseConfig";
-
 import "./Login.css";
 import google from "../../images/logos/google.png";
 import logo from "../../images/logos/logo.png";
@@ -17,14 +16,22 @@ const Login = () => {
   if (firebase.apps.length === 0) {
     firebase.initializeApp(firebaseConfig);
   }
+
+  //............ Google sign in starts.......//
+
   const handleGoogleSignIn = () => {
     var provider = new firebase.auth.GoogleAuthProvider();
     firebase
       .auth()
       .signInWithPopup(provider)
       .then(function (result) {
-        const { displayName, email } = result.user;
-        const signedInUser = { name: displayName, email };
+        const { displayName, email, photoURL } = result.user;
+        const signedInUser = {
+          name: displayName,
+          email,
+          profilePicture: photoURL,
+        };
+        console.log(signedInUser);
         setLoggedUser(signedInUser);
         storeAuthToken();
       })
@@ -45,6 +52,9 @@ const Login = () => {
         // Handle error
       });
   };
+
+  //................Google sign in end.........//
+
   return (
     <div className="login-page container">
       <Link to="/">
@@ -60,7 +70,7 @@ const Login = () => {
           <h3>Login</h3>
           <div className="google-image">
             <img src={google} alt="" />
-            <button className="btn btn-brand" onClick={handleGoogleSignIn}>
+            <button onClick={handleGoogleSignIn} className="btn btn-brand">
               Google Sign in
             </button>
           </div>
@@ -81,4 +91,5 @@ const Login = () => {
     </div>
   );
 };
+
 export default Login;

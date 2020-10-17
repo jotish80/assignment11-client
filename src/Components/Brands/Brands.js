@@ -4,6 +4,7 @@ import netflix from "../../images/logos/netflix.png";
 import slack from "../../images/logos/slack.png";
 import uber from "../../images/logos/uber.png";
 import google1 from "../../images/logos/google1.png";
+
 const Brands = () => {
   return (
     <section className="mt-5 row d-flex justify-content-center pt-5">
